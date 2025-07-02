@@ -35,6 +35,7 @@ Make sure you have the following installed:
    ```
 
 4. Create a `.env` file in the root directory and add your environment variables:
+#### NOTE: I have removed my original .evv file due to security purpose and I add added .env it .gitignore and for your reference I have mentioned in the .env.example file Please look into it 
 
    ```plaintext
    JWT_SECRET=your_secret_key
@@ -218,91 +219,7 @@ The server will run on `http://localhost:3000`.
 }
 ```
 
-## Testing the CRUD API
 
-You can test the API using **Postman** or **curl**.
-
-### Example of How to Test with Postman:
-
-#### Register a New User
-
-* Method: `POST`
-* URL: `http://localhost:3000/api/auth/register`
-* Body (JSON):
-
-```json
-{
-  "email": "user@example.com",
-  "password": "password123"
-}
-```
-
-#### Login and Get Token
-
-* Method: `POST`
-* URL: `http://localhost:3000/api/auth/login`
-* Body (JSON):
-
-```json
-{
-  "email": "user@example.com",
-  "password": "password123"
-}
-```
-
-* Save the JWT token returned in the response. You will use this token to authenticate subsequent requests.
-
-#### Add a Book
-
-* Method: `POST`
-* URL: `http://localhost:3000/api/books`
-* Headers:
-
-  * `Authorization: Bearer your_jwt_token_here`
-* Body (JSON):
-
-```json
-{
-  "title": "New Book Title",
-  "author": "New Author",
-  "genre": "Fiction",
-  "publishedYear": 2023
-}
-```
-
-#### Get All Books
-
-* Method: `GET`
-* URL: `http://localhost:3000/api/books`
-* Headers:
-
-  * `Authorization: Bearer your_jwt_token_here`
-
-#### Update a Book
-
-* Method: `PUT`
-* URL: `http://localhost:3000/api/books/:id`
-* Headers:
-
-  * `Authorization: Bearer your_jwt_token_here`
-* Body (JSON):
-
-```json
-{
-  "title": "Updated Book Title",
-  "author": "Updated Author",
-  "genre": "Updated Genre",
-  "publishedYear": 2024
-}
-```
-
-#### Delete a Book
-
-* Method: `DELETE`
-* URL: `http://localhost:3000/api/books/:id`
-* Headers:
-
-  * `Authorization: Bearer your_jwt_token_here`
 
 
 
