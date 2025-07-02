@@ -2,6 +2,7 @@
 # Bookstore API
 
 Made By Md Irshad 
+####NOTE: I have added the Postman Test Collection file also which can be used to test the apis directly after running the backend without manually adding all requests
 
 
 ## Setup Instructions
