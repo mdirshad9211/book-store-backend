@@ -5,7 +5,6 @@ const { v4: uuidv4 } = require('uuid');
 const usersFilePath = './data/users.json';
 
 const register = async (req, res) => {
-  // Check if req.body exists
   if (!req.body) {
     return res.status(400).json({ message: 'Request body is required' });
   }
@@ -43,7 +42,6 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  // Check if req.body exists
   if (!req.body) {
     return res.status(400).json({ message: 'Request body is required' });
   }

@@ -2,7 +2,6 @@ const fs = require('fs').promises;
 const { v4: uuidv4 } = require('uuid');
 const booksFilePath = './data/book.json';
 
-// Helper function to safely read JSON files
 const readJsonFile = async (filePath) => {
   try {
     const fileContent = await fs.readFile(filePath, 'utf-8');
@@ -37,7 +36,6 @@ const getBookById = async (req, res) => {
 };
 
 const addBook = async (req, res) => {
-  // Check if req.body exists
   if (!req.body) {
     return res.status(400).json({ message: 'Request body is required' });
   }
@@ -70,7 +68,6 @@ const addBook = async (req, res) => {
 };
 
 const updateBook = async (req, res) => {
-  // Check if req.body exists
   if (!req.body) {
     return res.status(400).json({ message: 'Request body is required' });
   }
