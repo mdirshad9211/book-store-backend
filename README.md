@@ -1,8 +1,7 @@
 
 # Bookstore API
 
-A RESTful API for managing a bookstore with user authentication and file-based persistence. This API allows users to register, login, and manage books, including CRUD operations.
-
+Made By Md Irshad 
 
 
 ## Setup Instructions
